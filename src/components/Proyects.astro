@@ -1,0 +1,51 @@
+---
+import ProyectsItem from "./ProyectsItem.astro"
+
+const EXPERIENCES = [
+    {
+        title: "Blog personale",
+        description: 'Piccolo blog personale dove scrivo di tecnologia, sport e della mia vita in generale. Il blog è realizzato con Django.',
+        pos:"end",
+        url:"https://h4cker54n.it/"
+
+    },
+    {
+        title: "Imagine",
+        description: "Software sviluppato per il progetto finale del corso di Tecnologie dell'Informazione. Si tratta di un'applicazione realizzata in Python (framework Kivy) per dispositivi mobili. Essa consisteva in una mappatura delle donazioni disponibili, consentendo alle persone di vedere in tempo reale dove sono necessarie le donazioni e di offrire le proprie.",
+        pos:"end"
+    },
+    {
+        title: "Tables",
+        description: "Questo software è una soluzione per una particolare sfida aziendale presso la mia attuale azienda. Realizzato in Python (con il framework Reflex), l'obiettivo è generare un PDF contenente un'immagine e un calendario con i campi richiesti per questa attività.",
+        pos:"end",
+        url:"https://tables.sbritos.it/"
+    },
+    {
+        title: "Labels",
+        description: "Labels è una piccola applicazione che ho sviluppato per calcolare le misure per le etichette di una tipografia, nonché per testare un po' Reflex, il framework di Python.",
+        pos:"end",
+        url:"https://labels.sbritos.it/",
+    },
+    {
+        title: "Wordpress",
+        description: "Questo sito è realizzato su WordPress per dimostrare le mie competenze in tale piattaforma, sia per la creazione di siti web che per applicazioni più complesse utilizzando queste tecnologie.",
+        flag:"🇺🇾",
+        pos:"end"
+    },
+    {
+        title: "Mialepa Mobile",
+        description: "Applicazione mobile creata con il framework Flutter per l'azienda presso cui lavoro. Consente la registrazione delle ore lavorative dei dipendenti, la loro visualizzazione, la generazione di report sulle ore lavorate, le richieste di ferie e la modifica delle password.",
+        pos:"end"
+    },
+    
+]
+---
+<ol class="relative border-e mb-32 border-gray-200 dark:border-gray-200 ">                  
+    {
+        EXPERIENCES.map((experience)=>(
+            <ProyectsItem {...experience} />
+        ))
+    }
+    <p  class="reveal-experience">Altri progetti sono disponibili nel seguente link: <a target="_blank" href="https://github.com/H4cKer54N" class="text-blue-500 underline text-2xl">Github</a></p>
+</ol>
+

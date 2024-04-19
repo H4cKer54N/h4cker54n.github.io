@@ -1,0 +1,14 @@
+---
+interface props{
+    title:string,
+    description:string,
+    date:string,
+    flag?:string,
+}
+const {title,description,date,flag,pos} = Astro.props
+---
+<li class="mb-10 ms-4 reveal-experience">
+    <time class="mb-1 text-sm font-normal leading-none text-orange-400/90 dark:text-gray-500">{date}</time>
+    <h3 class="text-lg font-semibold text-gray-200 dark:text-white">{title} - {flag}</h3>
+    <p class="text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">{description}</p>
+</li>

@@ -1,0 +1,36 @@
+<button
+    id="scroll-top-button"
+    onclick="window.scrollTo(0, 0)"
+    class="fixed bottom-8 right-8 bg-gray-800 text-white rounded-full p-2 shadow-lg focus:outline-none hover:bg-gray-700 "
+    aria-label="Ir hacia arriba"
+>
+<svg
+xmlns="http://www.w3.org/2000/svg"
+class="h-6 w-6"
+fill="none"
+viewBox="0 0 24 24"
+stroke="currentColor"
+>
+<path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+</svg>
+</button>
+<style>
+    #scroll-top-button {
+        animation:enhace-header;
+        animation-timeline: scroll(root);
+        animation-range:0 100px;
+    }
+    @keyframes enhace-header {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+

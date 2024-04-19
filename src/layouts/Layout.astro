@@ -1,51 +1,115 @@
 ---
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '@fontsource-variable/bitter';
+import ScrollTop from '../components/ScrollTop.astro';
 ---
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Curriculum vitae online di Santiago Nestor Britos">
+        <meta name="author" content="Santiago Nestor Britos">
+        <meta name="keywords" content="curriculum vitae, CV,Santiago, Britos, Santiago Britos, Programmatore, Python, Django, Reflex, 
+        Flutter, Web designer, mobile designer">
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Santiago Nestor Britos">
+        <meta property="og:description" content="Curriculum vitae online di Santiago Nestor Britos">
+        <meta property="og:image" content="/h4cker54n.webp">
+        <meta property="og:url" content="">
+        <meta property="og:type" content="website">
+        <meta name="twitter:title" content="Santiago Nestor Britos">
+        <meta name="twitter:description" content="Curriculum vitae online di Santiago Nestor Britos">
+        <meta name="twitter:image" content="/h4cker54n.webp">
+		<link rel="icon" type="image/svg+xml" href="/h4cker54n.webp" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>Curriculum Vitae Santiago Britos</title>
 	</head>
 	<body>
+		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+			<Header/>
 		<slot />
+        <ScrollTop/>
+		</div>
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		color-scheme: dark light;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: 'Bitter Variable',system-ui, sans-serif;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	body {
+		
+		background:#080808 ;
+		display: flex;
+		flex-direction: column; 
+		min-height: 100vh;
+		scroll-behavior: smooth;
 	}
+	@media (prefers-reduce-motion:reduce){
+		html{
+			scroll-behavior: auto;
+		}
+	}
+
+	.blink{
+        animation: blink 1s infinite;
+    }
+    .blink:hover{
+        animation: none;
+    }
+    @keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+
+    }
+	.reveal-experience {
+        animation:reveal linear both;
+        animation-timeline: view();
+        animation-range:entry 10% cover 40%;
+    }
+    @keyframes reveal {
+        from {
+            scale: .7;
+            translate: 0 100px ;
+        }
+        to {
+            scale: 1;
+            translate: 0 0;
+        }
+    }
+
+	.reveal-right-experience {
+        animation:reveal-right linear both;
+        animation-timeline: view();
+        animation-range:entry 10% cover 40%;
+    }
+    @keyframes reveal-right {
+        from {
+            translate: 200px 0px ;
+        }
+        to {
+            translate: 0 0;
+        }
+    }
+
+	.reveal-left-experience {
+        animation:reveal-left linear both;
+        animation-timeline: view();
+        animation-range:entry 40% cover 50%;
+    }
+    @keyframes reveal-left {
+        from {
+            translate: -200px 0px ;
+        }
+        to {
+            translate: 0 0;
+        }
+    }
 </style>

@@ -1,0 +1,25 @@
+---
+interface props{
+    title:string,
+    description:string,
+    date:string,
+    flag?:string,
+    url?:string,
+}
+const {title,description,date,flag,pos,url} = Astro.props
+---
+<li class="mb-10 reveal-experience hover:bg-blue-300/20 hover:rounded-lg mx-4 hover:p-2 transition-all duration-500">
+    {url ? (
+      <a target="_blank" href={url}>
+        <time class="mb-1 text-sm font-normal leading-none text-orange-400/90 dark:text-gray-500">{date}</time>
+        <h3 class="text-lg font-semibold text-gray-200 dark:text-white">{title}</h3>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">{description}</p>
+      </a>
+    ) : (
+      <>
+        <time class="mb-1 text-sm font-normal leading-none text-orange-400/90 dark:text-gray-500">{date}</time>
+        <h3 class="text-lg font-semibold text-gray-200 dark:text-white">{title}</h3>
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">{description}</p>
+      </>
+    )}
+  </li>

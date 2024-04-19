@@ -1,0 +1,59 @@
+<div class="flex opacity-0 animate-fade-in-delayed-300">
+  <h1 class="text-white md:text-5xl text-3xl md:block font-bold pb-10">
+    Ciao <span class="say-hello">👋</span>, sono Santiago
+  </h1>
+  <a href="mailto:s.britos@hotmail.com">
+  <span
+    class="bg-green-100 md:hidden flex blink text-green-800 text-xs h-10 sm:h-5 font-bold mx-2 px-2.5 py-0.5 rounded-t-md rounded-br-md dark:bg-green-900 dark:text-green-300"
+    >Aperto alle offerte</span
+  ></a>
+</div>
+
+<h2 class="md:text-2xl text-lg text-wrap opacity-0 animate-fade-in-delayed-600">
+  <span class="text-orange-400/90">Sviluppatore con 3 anni di esperienza</span
+  >, ho esperienza nello sviluppo di applicazioni web e mobile. Il mio
+  focus principale è stato lo sviluppo di applicazioni web con <a
+    href="https://www.djangoproject.com/"
+    class="text-green-500/80">DJANGO</a
+  >, ma ho anche lavorato su progetti mobile utilizzando <a
+    href="https://flutter.dev/"
+    class="text-blue-400">Flutter</a
+  > e altre tecnologie.
+</h2>
+
+<style>
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .say-hello {
+    display: inline-block; /* Asegura que el span se comporte como un bloque para aplicar correctamente la animación */
+    animation: wave 1s infinite;
+  }
+
+  @keyframes fade-in-delayed {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in-delayed-300 {
+    animation: fade-in-delayed 1s ease-out forwards;
+    animation-delay: 300ms; /* Ajusta el valor según lo que desees */
+  }
+  .animate-fade-in-delayed-600 {
+    animation: fade-in-delayed 1s ease-out forwards;
+    animation-delay: 600ms; /* Ajusta el valor según lo que desees */
+  }
+</style>

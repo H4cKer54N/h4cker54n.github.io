@@ -1,0 +1,63 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCES = [
+    {
+        date: "Da luglio 2020 a oggi",
+        title: "Mialepa Electrical Services",
+        description: "Nel corso della mia carriera professionale, ho ricoperto il ruolo di informatico e programmatore, concentrandomi sulla manutenzione e lo sviluppo di sistemi informatici. Uno dei miei progetti più significativi include la creazione di un sistema integrato per la gestione delle risorse umane, che comprendeva dalla registrazione dei lavori alla gestione dei documenti di trasporto (DDT), offerte, clienti e veicoli. Il mio lavoro ha coinvolto la progettazione, lo sviluppo e la manutenzione di questo sistema, garantendone l'efficienza e la funzionalità. Questa esperienza mi ha fornito una profonda conoscenza nell'implementazione di soluzioni tecnologiche che promuovono la produttività e l'efficacia operativa in ambienti aziendali.",
+        flag:"🇮🇹",
+        pos:"start"
+
+    },
+    {
+        date: "Luglio 2019 - Luglio 2020",
+        title: "Fortex Srl",
+        description: "In Fortex, ho lavorato come assistente pittore, dove ho imparato l'italiano e ho sviluppato uno strumento per calcolare la quantità di vernice necessaria. Questo strumento è stato ben accolto dai miei colleghi e ha migliorato la nostra efficienza sul lavoro.",
+        flag:"🇮🇹",
+        pos:"start"
+
+    },
+    {
+        date: "Gennaio 2015 - Maggio 2019",
+        title: "Geocom Uruguay S.A.",
+        description: "Durante il mio tempo in Geocom, ho svolto molteplici ruoli, dal fornire supporto tecnico sia via telefono che di persona fino alla gestione dell'inventario con un team sotto la mia responsabilità. Questo lavoro ha segnato il mio ritorno all'informatica dopo una carriera come calciatore. Durante questo periodo, ho acquisito competenze versatili e una solida comprensione della gestione dell'inventario, mentre mi reinserivo nel campo della tecnologia.",
+        flag:"🇺🇾",
+        pos:"start"
+
+
+    },
+    {
+        date: "Giugno 2012 - Gennaio 2015",
+        title: "Calciatore Professionista",
+        description: "Durante il mio periodo come calciatore, ho avuto l'opportunità di emigrare e giocare in varie squadre all'estero, dall'Ecuador all'Argentina. Questa esperienza mi ha insegnato l'importanza del lavoro di squadra, della disciplina e della perseveranza, valori che ho applicato nella mia carriera professionale nel campo della tecnologia.",
+        flag:"🇪🇨 - 🇦🇷",
+        pos:"start"
+
+    },
+    {
+        date: "Gennaio 2012 - Giugno 2012",
+        title: "Urudata Software",
+        description: "Nel mio tempo in Urudata, ho svolto compiti di supporto tecnico e manutenzione di apparecchi informatici. Questa esperienza mi ha permesso di acquisire competenze tecniche e di risoluzione dei problemi, che sono risultate utili nella mia carriera professionale.",
+        flag:"🇺🇾",
+        pos:"start"
+
+    },
+    {
+        date: "Gennaio 2010 - Gennaio 2012",
+        title: "Calciatore Professionista",
+        description: "Durante la mia carriera come calciatore, ho giocato in diverse squadre dell'Uruguay, tra cui C.A. Rentistas, Canadian F.C., e C.A. River Plate, tra gli altri. Questa esperienza mi ha fornito lezioni fondamentali sul lavoro di squadra, la disciplina e la perseveranza, aspetti che ho portato con me nella mia carriera professionale nel campo della tecnologia.",
+        flag:"🇺🇾",
+        pos:"start"
+    },
+    
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-200">                  
+    {
+        EXPERIENCES.map((experience)=>(
+            <ExperienceItem {...experience} />
+        ))
+    }
+</ol>
+
